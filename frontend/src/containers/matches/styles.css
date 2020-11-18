@@ -1,0 +1,238 @@
+.activity.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.activity.dropdown .dropdown-menu .heading {
+  font-size: 16px;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.activity.dropdown .dropdown-menu .heading span {
+  border-bottom: 1px solid #fb7192;
+}
+
+.activity.dropdown .dropdown-menu .dropdown-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: #682e3c;
+  padding: 5px 0px;
+}
+
+.activity.dropdown .dropdown-menu .dropdown-item:hover {
+  color: #fb7192ff;
+}
+
+.activity.dropdown .dropdown-menu .dropdown-item.active {
+  background: transparent !important;
+}
+
+/*user-detail*/
+.user-detail .detail-items {
+  list-style: none;
+}
+.user-detail ul li {
+  font-size: 15px;
+  line-height: 25px;
+}
+.user-detail .detail-items li:last-child {
+  font-size: 14px;
+  color: grey;
+}
+.user-detail .border-primary:after {
+  width: 34px;
+}
+.about-me ul {
+  list-style: none;
+}
+.user-detail .about-me ul li i {
+  font-size: 18px;
+}
+.user-detail .single-image img {
+  width: 100%;
+  height: 300px;
+}
+.user-detail .user-images img {
+  width: 60px;
+  height: 60px;
+}
+.user-detail .nav-item .nav-link {
+  padding: 7px;
+}
+.bg-dark-grey {
+  background-color: #565656;
+}
+.flex.items-center a.me1 {
+  display: inline-block;
+  font-size: 30px;
+  margin: auto 10px 5px;
+  color: #4d4d4d;
+}
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: 13px; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: "";
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip);
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: 0.3ch;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+.action-buttons {
+  display: flex;
+  align-items: flex-end;
+  height: 70%;
+}
+.pointer.circle.icon-padding.shadow.relative.bg-dark-grey.bg-action-highlight {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.action-buttons .bottomdata {
+  display: flex;
+  align-items: flex-end;
+}
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip=""]::before,
+[tooltip=""]::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-0.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(0.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(0.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+.report.border-none.p0.h4.body-font-color.bg-transparent.relative.pointer {
+  color: #4a81d5;
+}

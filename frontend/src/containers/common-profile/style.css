@@ -1,0 +1,34 @@
+ol.progtrckr li.progtrckr-todo {
+  pointer-events: none;
+}
+ol.progtrckr li.progtrckr-doing {
+  pointer-events: none;
+}
+.setting-membership button#next-button {
+  display: none;
+}
+.setting-membership button#prev-button {
+  display: none;
+}
+ol.progtrckr li.progtrckr-done {
+  pointer-events: none;
+}
+.setting-membership label.left .checkmark {
+  left: 10% !important;
+}
+.setting-membership .step1-table label strong {
+  margin-left: 20%;
+}
+.overicons {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.overicons i {
+  cursor: pointer;
+  color: #fff !important;
+}
+/* div#paypal-animation-container {
+  display: none;
+} */

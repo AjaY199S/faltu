@@ -1,0 +1,142 @@
+ol.progtrckr {
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+ol.progtrckr li {
+  display: inline-block;
+  text-align: center;
+  line-height: 4.5rem;
+  cursor: pointer;
+}
+
+ol.progtrckr li span {
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 650px) {
+  .progtrckr li span {
+    display: none;
+  }
+}
+.progtrckr em {
+  display: none;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+@media (max-width: 650px) {
+  .progtrckr em {
+    display: inline;
+  }
+}
+
+ol.progtrckr li.progtrckr-todo {
+  color: silver;
+  border-bottom: 4px solid silver;
+}
+
+ol.progtrckr li.progtrckr-doing {
+  color: black;
+  border-bottom: 4px solid #cccccc;
+}
+
+ol.progtrckr li.progtrckr-done {
+  color: #383737;
+  border-bottom: 4px solid#28a745;
+}
+
+ol.progtrckr li:after {
+  content: "\00a0\00a0";
+}
+
+ol.progtrckr li:before {
+  position: relative;
+  bottom: -3.7rem;
+  float: left;
+  left: 50%;
+}
+
+ol.progtrckr li.progtrckr-todo:before {
+  content: "\039F";
+  color: silver;
+  background-color: white;
+  width: 1.2em;
+  line-height: 1.4em;
+}
+
+ol.progtrckr li.progtrckr-todo:hover:before {
+  color: #ff4500;
+}
+
+ol.progtrckr li.progtrckr-doing:before {
+  content: "\2022";
+  color: white;
+  background-color: #cccccc;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+}
+
+ol.progtrckr li.progtrckr-doing:hover:before {
+  color: #ff4500;
+}
+
+ol.progtrckr li.progtrckr-done:before {
+  content: "\2713";
+  color: #fff !important;
+  background-color: #28a745;
+  width: 1.2em;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 600;
+}
+
+ol.progtrckr li.progtrckr-done:hover:before {
+  color: #333;
+}
+
+#prev-button,
+#next-button {
+  font-size: 0.87rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+  width: unset;
+  vertical-align: top;
+  border-radius: 0.25rem !important;
+  margin: auto;
+  display: inline-block;
+}
+#prev-button {
+  margin-right: 15px;
+}
+.footer-buttons {
+  text-align: center;
+}
+i.fas.fa-power-off.bg-danger.text-white.rounded.py-2.logout {
+  width: 43px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ff4500 !important;
+}
+.search-checkbox-label {
+  font-size: 16px;
+}
+.radio-label.left0 .checkmark {
+  left: 0 !important;
+}

@@ -1,0 +1,86 @@
+.chat-page {
+  height: 70vh;
+}
+
+.chat-page .table-wrapper .send-message {
+  float: right;
+  position: relative;
+  background-color: #4fa3e7;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  max-width: 100%;
+}
+
+.chat-page .table-wrapper .recieve-message {
+  float: left;
+  position: relative;
+  background-color: #4fa3e7;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  max-width: 100%;
+}
+.chat-page .table-wrapper .message-table td {
+  width: 100%;
+  display: inline-block;
+}
+.chat-page .table-wrapper .message-table tr {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+.chat-page .table-wrapper {
+  display: block;
+  overflow-y: auto;
+  height: 50vh;
+  border: 1px solid #aaa;
+}
+
+.chat-page .message-field button {
+  flex-shrink: 0;
+  flex-grow: 1;
+  background-color: #4fa3e7;
+  color: #fff;
+}
+.chat-page .message-field input {
+  padding: 10px 10px;
+  flex-shrink: 0;
+  flex-grow: 20;
+}
+.chat-page .message-field {
+  width: 100%;
+  height: 6vh;
+  flex: 0 0 100%;
+  display: flex;
+}
+.messages .msg-table .text ul,
+.msg-detail ul {
+  overflow: auto;
+}
+i.fas.fa-bookmark.fav {
+  color: green;
+  cursor: pointer;
+}
+i.fas.fa-bookmark {
+  cursor: pointer;
+}
+i.delete-color.far.fa-trash-alt {
+  color: red;
+  cursor: pointer;
+}
+.evenicons {
+  float: right;
+}
+.odd .evenicons {
+  float: left !important;
+}
+#multiselectContainerReact:after {
+  position: absolute;
+  content: "\f078";
+  right: 5px;
+  top: 8px;
+  font-family: "icomoon";
+  font-size: 10px;
+  color: #6c757d;
+}
